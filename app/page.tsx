@@ -9,11 +9,11 @@ import { Switch } from "../components/ui/switch";
 import { Twitter, Globe, Github, Copy, Trash2 } from 'lucide-react';
 import html2canvas from 'html2canvas';
 
-const defaultText = `我总是不假思索地在上路， 因为出发的感觉真是太好了
+const defaultText = `在这里输入文字，然后点击“下载卡片”。即可生成一张带文字的图形卡片。
 
-I was surprised, as always, that how easy it was to leave—how good it felt to be gone, to be on the move, to be someplace where I had never been before and where I was never going to be again.
+enter text here,Then click "Download Card",You can generate a graphic card with text.
 
-- John Krakauer, Into the Wild. `;
+—— www.kkimg.com `;
 
 interface TextPreviewProps {
     text: string;
@@ -212,15 +212,15 @@ const TextToImageGenerator: React.FC = () => {
         <div className="min-h-screen bg-[#EFEEE5] p-6 md:p-10 lg:p-16 huiwen-font flex flex-col">
             <Card className={`w-full mx-auto rounded-2xl overflow-hidden shadow-lg flex-grow bg-white ${isVertical ? 'max-w-3xl' : 'max-w-6xl'}`}>
                 <CardContent className="p-6 md:p-8 lg:p-10">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-6 text-[#166434]">文字生成图片工具</h1>
+                    <h1 className="text-2xl md:text-3xl font-bold mb-6 text-[#166434]">文字生成图形卡片工具</h1>
                     <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
-                            <span>横版</span>
+                            <span>横版卡片</span>
                             <Switch
                                 checked={isVertical}
                                 onCheckedChange={setIsVertical}
                             />
-                            <span>竖版</span>
+                            <span>竖版卡片</span>
                         </div>
                     </div>
                     <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
@@ -237,13 +237,13 @@ const TextToImageGenerator: React.FC = () => {
                                     onClick={handleDownload}
                                     className="huiwen-font bg-black text-white hover:bg-gray-800 rounded-xl text-sm md:text-base py-2 px-4"
                                 >
-                                    下载图片
+                                    下载卡片
                                 </Button>
                                 <Button
                                     onClick={handleCopy}
                                     className="huiwen-font bg-gray-200 text-black hover:bg-gray-300 rounded-xl text-sm md:text-base py-2 px-4"
                                 >
-                                    <Copy className="mr-2 h-4 w-4" /> 复制图片
+                                    <Copy className="mr-2 h-4 w-4" /> 复制卡片
                                 </Button>
                                 <Button
                                     onClick={handleClear}
@@ -262,7 +262,7 @@ const TextToImageGenerator: React.FC = () => {
             <footer className="mt-8 text-center">
                 <div className="flex justify-center space-x-4">
                     <a
-                        href="https://x.com/benshandebiao"
+                        href="https://www.800880.com"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-600 hover:text-black transition-colors duration-200"
@@ -271,7 +271,7 @@ const TextToImageGenerator: React.FC = () => {
                         <Twitter size={20} />
                     </a>
                     <a
-                        href="https://pomodiary.com/"
+                        href="https://www.eeee.me"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-600 hover:text-black transition-colors duration-200"
@@ -280,7 +280,7 @@ const TextToImageGenerator: React.FC = () => {
                         <Globe size={20} />
                     </a>
                     <a
-                        href="https://github.com/qiaoshouqing/text2card"
+                        href="https://www.niubi.ge"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-gray-600 hover:text-black transition-colors duration-200"
@@ -289,7 +289,7 @@ const TextToImageGenerator: React.FC = () => {
                         <Github size={20} />
                     </a>
                 </div>
-                <p className="mt-2 text-xs md:text-sm text-gray-500">© 2024 文字生成图片工具. All rights reserved.</p>
+                <p className="mt-2 text-xs md:text-sm text-gray-500">© www.kkimg.com</p>
             </footer>
         </div>
     );
